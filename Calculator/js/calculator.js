@@ -42,7 +42,7 @@ const perform_calculation={
     '*':(first_operand,second_operand)=>first_operand*second_operand,
     '+':(first_operand,second_operand)=>first_operand+second_operand,
     '-':(first_operand,second_operand)=>first_operand-second_operand,
-    '=':(first_operand,second_operand)=>second_operand,
+    '=':(first_operand,second_operand)=>second_operand
 };
 function calculator_reset(){
     calculator.display_value='0';
@@ -61,7 +61,7 @@ keys.addEventListener('click',(event)=>{
     if(!target.matches('button')){
         return;
     }
-    if(target.classList.contains('.operator')){
+    if(target.classList.contains('operator')){
         handle_operator(target.value);
         update_display();
         return;
