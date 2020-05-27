@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html"; charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/pizza.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./images/orderup.ico" type="image/x-icon"/>
+    <title>Pizza Jonze</title>
+</head>
+<body id="menuBG">
+<div> 
+    <h1 style="color:whitesmoke;">&nbspPizza Jonze</h1>
+        <p><strong><center>
+            <q>All pizza is good.<br>
+               <i>This</i> pizza is <i>astounding</i>!</q></strong><br><br>
+            Welcome to the Pizza Jonze website!<br>
+            We are ready to take your order!
+        </center></p>
+</div>
+<div class="card-deck" id="menu1">
+    <div class="card" id="size">
+        <div class="card-block h-100 px-4">
+            <h3 class="card-title text-center">Sizes</h3>
+                <div class="card-text text-center">
+                    <br><input class="size" type="radio" name="Size" value="Kid's (6 inch)">&nbsp;Kid's (6") - $6<br>
+                    <input class="size" type="radio" name="Size" value="Personal (10 inch)">&nbsp;Personal (10") - $10<br>
+                    <input class="size" type="radio" name="Size" value="Small (12 inch)">&nbsp;Small (12") - $12<br>
+                    <input class="size" type="radio" name="Size" value="Medium (14 inch)">&nbsp;Medium (14") - $14<br>
+                    <input class="size" type="radio" name="Size" value="Large (16 inch)">&nbsp;Large (16") - $16<br>
+                    <input class="size" type="radio" name="Size" value="Extra Large (18 inch)">&nbsp;Extra Large (18") - $18
+                </div>
+        </div>
+    </div>
+    <div class="card" id="meat">
+        <div class="card-block h-100 px-4">
+            <h3 class="card-title text-center">Meat Selection</h3>
+            <div class="card-text text-center">
+                <br><input class="meats" type="checkbox" name="Meats" value="Pepperoni">&nbsp;Pepperoni<br>
+                <input class="meats" type="checkbox" name="Meats" value="Sausage">&nbsp;Sausage<br>
+                <input class="meats" type="checkbox" name="Meats" value="Sliced Steak">&nbsp;Sliced Steak<br>
+                <input class="meats" type="checkbox" name="Meats" value="Canadian Bacon">&nbsp;Canadian Bacon<br>
+                <input class="meats" type="checkbox" name="Meats" value="Chicken">&nbsp;Chicken<br>
+                <input class="meats" type="checkbox" name="Meats" value="Bacon">&nbsp;Bacon
+            </div>
+        </div>
+    </div>
+    <div class="card" id="veg">
+        <div class="card-block h-100 px-4">
+            <h3 class="card-title text-center">Fruits & Vegetables</h3>
+            <div class="card-text text-center">
+                <br><input class="veg" type="checkbox" name="Veg" value="Black Olives">&nbsp;Black Olives<br>
+                <input class="veg" type="checkbox" name="Veg" value="Sliced Tomatoes">&nbsp;Sliced Tomatoes<br>
+                <input class="veg" type="checkbox" name="Veg" value="Pineapple">&nbsp;Pineapple<br>
+                <input class="veg" type="checkbox" name="Veg" value="Mushrooms">&nbsp;Mushrooms<br>
+                <input class="veg" type="checkbox" name="Veg" value="Red Onions">&nbsp;Red Onions<br>
+                <input class="veg" type="checkbox" name="Veg" value="Green Peppers">&nbsp;Green Peppers<br>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-deck" id="menu2">
+    <div class="card" id="sauce">
+        <div class="card-block h-100 px-4">
+            <h3 class="card-title text-center">Saucy Sauces</h3>
+            <div class="card-text text-center">
+                <br><input class="sauce" type="radio" name="Sauce" value="Garlic Butter">&nbsp;Garlic Butter (only)<br>
+                <input class="sauce" type="radio" name="Sauce" value="Sweet Tomato">&nbsp;Sweet Tomato<br>
+                <input class="sauce" type="radio" name="Sauce" value="Spicy Marinara">&nbsp;Spicy Marinara<br>
+                <input class="sauce" type="radio" name="Sauce" value="Tangy Barbecue">&nbsp;Tangy Barbecue<br>
+                <input class="sauce" type="radio" name="Sauce" value="Alfredo">&nbsp;Alfredo<br>
+                <input class="sauce" type="radio" name="Sauce" value="Pesto">&nbsp;Pesto
+            </div>
+        </div>
+    </div>
+    <div class="card" id="cheese">
+        <div class="card-block h-100 px-4">
+            <h3 class="card-title text-center">Life is Cheesy</h3>
+            <div class="card-text text-center">
+                <br><input class="cheese" type="checkbox" name="Cheese" value="No Cheese (no charge)">&nbsp;...or not (None)<br>
+                <input class="cheese" type="checkbox" name="Cheese" value="Regular Mozzarella (no charge)">&nbsp;Regular<br>
+                <input class="cheese" type="checkbox" name="Cheese" value="Extra Mozzarella">&nbsp;Extra + $2<br>
+                <input class="cheese" type="checkbox" name="Cheese" value="Shaved Parmesan Cheese">&nbsp;Shaved Parmesan + $1<br>
+                <input class="cheese" type="checkbox" name="Cheese" value="Blue Cheese">&nbsp;Blue Cheese + $1<br>
+                <input class="cheese" type="checkbox" name="Cheese" value="Feta Cheese">&nbsp;Feta + $1
+            </div>
+        </div>
+    </div>
+    <div class="card" id="crust">
+        <div class="card-block h-100 px-4">
+            <h3 class="card-title text-center">Crust is a Must</h3>
+            <div class="card-text text-center">
+                <br><input class="crust" type="radio" name="Crust" value="Gluten Free Crust">&nbsp;Gluten Free + $1<br>
+                <input class="crust" type="radio" name="Crust" value="Cauliflower Crust">&nbsp;Cauliflower<br>
+                <input class="crust" type="radio" name="Crust" value="Thin Crust">&nbsp;Thin<br>
+                <input class="crust" type="radio" name="Crust" value="New York Style Crust">&nbsp;New York (foldable)<br>
+                <input class="crust" type="radio" name="Crust" value="Chicago Style Crust">&nbsp;Chicago (deep dish) + $1<br>
+                <input class="crust" type="radio" name="Crust" value="Focaccia Crust">&nbsp;Focaccia (thick) + $1
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
+</div>
+<div class="card-deck" id="menu3">
+    <div class="card" id="cart">
+        <div class="card-block h-100 px-4">
+            <h3 class="card-title text-center">Your Pizza: *</h3>
+            <div class="card-text text-center" id=showText></div>
+            <div id="totalPrice"></div>
+        </div>
+    </div>
+</div>
+
+<script src="./js/pizza.js" defer></script>
+</body>
+</html>

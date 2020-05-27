@@ -1,0 +1,55 @@
+#menuBG{
+    background-image: url("../images/body.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:#cccccc;
+    font-family:cursive,sans-serif;
+    font-size:125%;
+    color:whitesmoke;
+}
+
+h1, #btnOrder{
+    margin: 50px;
+}
+
+h4, #totalPrice{
+    text-align: right;
+    font-weight: bold;
+}
+
+.card-deck{
+    margin: 25px auto;
+    padding: 50px;
+}
+
+#size, #crust, #sauce, #cheese, #veg, #meat{
+    background-color: transparent;
+    border-radius: 10px;
+    margin: 10px auto;
+    border: 2px black;
+}
+
+#size .card-title, #crust .card-title, #sauce .card-title, #cheese .card-title, #veg .card-title, #meat .card-title, #menu3{
+    box-shadow: inset  -1px -1px 25px 5px #300000;
+    color:whitesmoke;
+    border-bottom: 4px black;
+    border-radius: 10px 10px 0 0;
+    margin: 10px auto;
+    width: inherit;
+    background-color: rgb(114, 3, 3,.6);
+}
+#size .card-text, #crust .card-text, #sauce .card-text, #cheese .card-text, #veg .card-text, #meat .card-text{
+    box-shadow: inset  -1px -1px 25px 5px whitesmoke;
+    height: inherit;
+    border-radius: 0 0 10px 10px;
+    width: inherit;
+    background-color: rgb(165, 4, 4) rgb(255,255,255,.4);
+}
+
+#menu3{
+    background-color:#cccccc;
+    font-family:cursive,sans-serif;
+    font-size:125%;
+    color:black;
+}
