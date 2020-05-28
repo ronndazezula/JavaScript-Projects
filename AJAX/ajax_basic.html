@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Basic AJAX Demo</title>
+		<link rel="stylesheet" href="style.css">
+    </head>
+    <body class = "main">
+        <div class="content" id="demo">
+        <h2>Get Even Newer Content<br>Challenge Step 296:</h2>
+            <input type="button" class="button" value="Get Newer Content" id="demo" onclick="loadDoc();"/>
+        </div>
+        <script type="text/javascript">
+            function loadDoc(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function(){
+                    if (this.readyState == 4 && this.status == 200){
+                        document.getElementById("demo").innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open("GET", "ajax_info.html", true);
+                xhttp.send();
+            }
+        </script>
+        <br><br><h2>Get Older Content:</h2>
+        <div class="content" id="content">
+            <input type="button" class="button" value="Get Content" id="btn_content" onclick="getContent();"/>
+        </div>
+        <script type="text/javascript">
+            var ajax = new XMLHttpRequest();
+            ajax.open('GET', 'content.html');
+            ajax.onreadystatechange=function(){
+                if (ajax.readyState == 4){
+                    document.getElementById('content').innerHTML = ajax.responseText;
+                }
+            }
+            function getContent(){
+                ajax.send();
+                document.getElementById('btn_content').style.display= 'none';
+            }
+        </script>
+    </body>
+</html>
