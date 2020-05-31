@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="./images/RZ.ico" type="image/x-icon"/>
+	<title>Ronnda Zezula</title>
+		<link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+		<script src="./js/portfolio.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<!--BODY-->
+<body class="Background">
+<!--FADEIN-->
+<script>
+	document.body.className += ' fade-out';
+    $(function() {
+      $('body').removeClass('fade-out');
+    }
+	);
+</script>
+<!--NAV-->
+	<div class="Navbar">
+		<a class="active" href="#Home">Home</a>
+		<a href="#Slideshow">Slideshow</a>
+		<a href="#About">About</a>
+		<a href="#GitHub">GitHub</a>
+		<a onclick="openForm()">Contact</a>
+	</div>
+<!--CLOSE FORM-->
+	<div class="btn cancel" onclick="closeForm()">
+		<!--VIDEO-->
+		<video autoplay muted loop id="Typing_Video">
+			<source src="./video/typing.mp4" type="video/mp4">
+			Your browser does not support HTML5 video.
+		</video>
+	</div>
+<!--VIDEO TEXT-->
+	<div class="Video_Text" id="Home">
+		<h1 style="color:white;">Ronnda's Portfolio</h1>
+			<p>
+			  <strong>
+					<center>
+						<q>A good programmer is someone who always looks both ways before crossing a one-way street.</q><br>
+						- <small>Doug Linder</small><br>
+						<br>
+						My name is Ronnda Zezula. Welcome to my portfolio website.<br>
+						On this site I offer basic information about my professional background and experience.<br>
+						If you would like more information, click the "Contact" button to send me a message.<br>
+						Thank you for your valuable time!
+					</center>
+			  </strong>		
+			</p>
+	</div>
+<!--SLIDESHOW-->
+	<div id="Slideshow">
+    <div id="Slideshow_Background">
+    <div id="Slideshow_Container">
+		<div class="mySlides fade">
+			<div class="Slide_Number">1 / 4</div>
+				<img class="Slide_Show_Images" src="./images/headshot.png" style="width:100%">
+					<div class="text">It is a pleasure to meet you!</div>
+		</div>
+		<div class="mySlides fade">
+			<div class="Slide_Number">2 / 4</div>
+				<img class="Slide_Show_Images" src="./images/python.png" style="width:100%">
+					<div class="text">I am a full-stack Python developer, trained in C#, .NET Framework, ASP.NET and MVC.</div>
+		</div>
+		<div class="mySlides fade">
+			<div class="Slide_Number">3 / 4</div>
+				<img class="Slide_Show_Images" src="./images/tools.png" style="width:100%">
+					<div class="text">I have experience in back end development,<br>databases and SQL,<br> and in HTML, CSS and JavaScript.</div>
+		</div>
+		<div class="mySlides fade">
+			<div class="Slide_Number">4 / 4</div>
+				<img class="Slide_Show_Images" src="./images/contact.png" style="width:100%">
+					<div class="text">
+						<a onclick="openForm()" href="#contact" style="color:whitesmoke;">Click to contact me!</a>
+					</div>
+		</div>
+	<a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="Next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	<br>
+    <div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span>
+		<span class="dot" onclick="currentSlide(2)"></span>
+		<span class="dot" onclick="currentSlide(3)"></span>
+		<span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+    </div>
+	</div>
+<!--SLIDESHOW JS, ensures it has priority-->
+<script>
+    var slideIndex = 1;
+	  showSlides(slideIndex);
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		  slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	}
+</script>
+<!--NO BKGCLR SPACE BEFORE ABOUT-->
+	<div>
+	<br><br>
+	</div>
+<!--ABOUT-->
+<div class="Row" id="About">
+		<div class="Column_2"> <!--LeftCol-->
+		<img src="./images/aboutme.png" alt="About Me">
+		</div>
+		<div class="Column_1"> <!--RightCol-->
+		<h1>About Me</h1>
+		<p>	I am a graduate of <a href=https://www.learncodinganywhere.com/codingbootcamps target="_blank">The Tech Academy</a>’s Python Developer Boot Camp, trained in multiple programming, scripting, markup and style sheet languages; including: Python, JavaScript, HTML5, CSS and SQL.</p>
+		</div>
+	</div>
+<!--GITHUB-->
+	<div class="Row" id="GitHub">
+		<div class="Column_1"> <!--LeftCol-->
+			<h1>Project Examples</h1>
+			<p>Examples of my projects can been viewed <a href="https://github.com/ronndazezula" target="_blank">on my GitHub</a>.<br><br>
+			I am a full-stack web and software developer who would be honored to work on your projects. <a href="#contact">Follow this link</a> to contact me!</p>
+		</div>
+		<div class="Column_2"> <!--RightCol-->
+			<a href="https://github.com/ronndazezula" target="_blank"><img class="git" src="./images/github.png" alt="GitHub"></a>
+		</div>
+	</div>
+<!--CONTACT-->
+	<div id="Contact">
+		<button onclick="openForm()" class="Pop_Up_Button">Contact Me</button>
+		<div class="form-popup" id="myForm">
+			<form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
+				<h2>Contact</h2>
+				<label for="name"><b>Name</b></label>
+					<input type="text" placeholder="Nice to meet you! What is your name?" name="name" required><br>
+				<label for="phone"><b>Phone</b></label>
+					<input type="text" placeholder="Optional, if you would rather I call you." name="phone"><br>
+				<label for="email"><b>Email</b></label>
+					<input type="text" placeholder="Where can I email you to respond?" name="email" required><br>
+				<label for="message"><b>Message</b></label>
+					<input type="text" placeholder="Please Let me know how I can help you." name="message"><br>
+				<button type="submit" class="btn">Send</button>
+				<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+			</form>
+		</div>
+	</div>
+<!--NO BKGCLR SPACE BEFORE FOOTER-->
+	<div>
+	<br><br>
+	</div>
+<!--FOOTER-->
+	<footer>
+		<p>
+			<br><br><center>&copy 2020 | Ronnda Zezula's <a href="https://ronnda.info/">Portfolio website</a></center><br>
+		</p>
+	</footer>
+
+</body>
+</html>
